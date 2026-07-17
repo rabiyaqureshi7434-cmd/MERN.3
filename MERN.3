@@ -1,0 +1,374 @@
+3.React Introduction and JSX
+a. Create a React application using Vite/CRA and display “Welcome
+to MERN Stack Development”.
+
+code
+
+function App()
+
+{
+return (
+
+);
+
+}
+
+<div>
+
+<h1>Welcome the MERN stack Development</h1>
+
+</div>
+
+export default App
+
+b. Display dynamic data using JSX. 
+Code
+function App()
+{
+  const emp = "Rabiya";
+  const dept = "IT";
+  const sal = 50000;
+
+    return (
+        <div>
+          <h1> Employee Details</h1>
+          <p>Name:{emp}</p>
+          <p>Departement:{dept}</p>
+          <p>Salary:₹{sal}</p>
+        </div>
+    );
+}
+export default App
+
+3B
+CODE
+function App()
+{
+  const studentName = "Rabiya";
+  const totalClasses = 60;
+  const attendedClasses = 54;
+  const attendance = (attendedClasses / totalClasses) * 100;
+    return (
+        <div>
+          <h1> Attendance Dashboard</h1>
+          <hr />
+          <p>Name:{studentName}</p>
+          <p>Total Classes :{totalClasses}</p>
+          <p>Classes Attended:{attendedClasses}</p>
+          <p> Attendance:{attendance.toFixed(2)}%</p>
+          <h3>
+            Status : {attendance >= 75? "Eligible for Exam": "Not Eligible"}
+          </h3>
+          <p>Rabiya T034</p>
+        </div>
+    );
+}
+export default App
+
+c. Declare variables and write a function to calculate the sum of two
+numbers and display the result.
+Code : 
+function App() {
+
+
+  const maths = 85;
+  const sci = 90;
+
+
+  function calculate(mark1, mark2) {
+    return mark1 + mark2;
+  }
+
+
+  return (
+    <div>
+      <h1>Student Marks</h1>
+      <hr />
+      <p>Mathematics Marks : {maths}</p>
+      <p>Science Marks : {sci}</p>
+      <hr />
+      <h2>Total Marks : {calculate(maths, sci)}</h2>
+      <h3>Rabiya  (T034)</h3>
+    </div>
+  );
+}
+  export default App
+d. Apply basic CSS styling to a React component
+Code :
+import "./App.css";
+
+function App() {
+
+return (
+
+<div className="container">
+
+<h1>Student Dashboard</h1>
+
+<hr />
+
+<p>Name: Rabiya qureshi</p>
+
+<p>Roll Number: 101</p>
+
+<p>Course: MCA</p>
+
+<p>Semester: III</p>
+
+<button>View Result</button>
+
+</div>
+
+);
+
+}
+
+export default App;
+
+
+App.cs
+
+container {
+
+width: 700px;
+
+margin: 50px auto;
+
+padding: 20px;
+
+border: 2px solid black;
+
+border-radius: 10px;
+
+background-color: whitesmoke;
+
+text-align: center;
+
+}
+
+h1 {
+
+color: darkblue;
+
+}
+
+p {
+
+font-size: 18px;
+
+color: black;
+
+}
+
+button {
+
+background-color: green;
+
+color: ■white;
+
+border: none
+
+padding: 10px 20px;
+
+font-size: 16px;
+
+border-radius: 5px;
+
+cursor: pointer;
+
+button:hover {
+
+background-color:darkgreen;
+}
+
+e. Create a simple functional component and render it in App.js.
+
+src > compc + function Student(): React.JSX.El
+
+function Student() {
+
+return (
+
+<div>
+
+<h2>Student Components</h2>
+
+<p>Name : Rabiya qureshi </p>
+
+<p>Course: MCA</p>
+
+<p>Semester: III</p>
+
+</div>
+
+);
+
+}
+
+export default Student;
+port Student from "./components/Students";
+
+unction App() {
+
+return (
+
+<div>
+
+<h1>This is fictional component practical</h1>
+
+<hr />
+
+<Student>
+
+</div>
+
+);
+
+export default App;
+
+f. Create a React component that displays the current date and time
+dynamically using JavaScript.
+Code : 
+function App() {
+
+
+  const currentDate = new Date;
+  return (
+    <div>
+      <h1>Current Date and Time</h1>
+      <hr />
+      <p>Date : {currentDate.toLocaleDateString()}</p>
+      <p>Time : {currentDate.toLocaleTimeString()}</p>
+      
+      <h3>Rabiya  (T034)</h3>
+    </div>
+  );
+}
+  export default App
+
+
+
+ Extra 
+Code
+function Header(){
+    return (
+        <div>
+            <h1>M. V. L. U College Management System</h1>
+            <hr />
+        </div>
+    );
+}
+export default Header;<object data="" type=""></object><object data="o
+" type=""></object>
+
+
+function Student() {
+  return (
+    <div>
+      <h2>Student Details</h2>
+
+
+      <p>Name : Rabiya qureshi</p>
+      <p>Course : B. Sc. IT</p>
+      <p>Semester : V</p>
+    </div>
+  );
+}
+
+
+export default Student;
+
+
+function Result() {
+  const java = 90;
+  const python = 95;
+  const react = 93;
+
+
+  return (
+    <div>
+      <h2>Result</h2>
+
+
+      <p>Total Marks : {java + python + react}</p>
+
+
+      <p>
+        Percentage : {(((java + python + react) / 300) * 100).toFixed(2)}%
+      </p>
+
+
+      <p>Grade : A+</p>
+    </div>
+  );
+}
+
+
+export default Result;
+
+
+function Attendance() {
+  const tc = 60;
+  const p = 55;
+  const per = (p / tc) * 100;
+
+
+  return (
+    <div>
+      <h2>Attendance</h2>
+
+
+
+
+      <p>Total Classes : {tc}</p>
+      <p>Present : {p}</p>
+      <p>Attendance : {per.toFixed(2)}%</p>
+    </div>
+  );
+}
+
+
+export default Attendance;
+
+
+export default Footer;
+
+
+import Header from "./components/header";
+import Student from "./components/Student";
+import Attendance from "./components/Attendance";
+import Result from "./components/result";
+import Footer from "./components/footer";
+
+
+function App() {
+  return (
+    <div>
+      <header />
+
+      <Student />
+
+      <hr />
+
+      <Attendance />
+
+      <hr />
+
+      <result />
+
+      <footer />
+    </div>
+  );
+}
+
+export default App;
+
+
+
+
+
+
+
+
+
+
